@@ -1,0 +1,74 @@
+footer{
+    position: relative;
+    .footer__img-bottom{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: -1;
+    }
+    h4{
+        padding: 10px 0;
+        color: $color-white;
+    }
+    li,a{
+        color: $color-white;
+        font-size: $fs-1 + 1;
+        line-height:2.5;
+    }
+    li:hover a{
+        color: $color-white;
+        opacity: .8;
+    }
+    .footer__list{
+        li{
+            
+            transition: $ts;
+            border-bottom: 1px solid rgba(0,0,0,.1);
+           
+            
+        }
+
+    }
+    .footer__icon{
+        a{
+            padding-right: 10px;
+            &:hover{
+                color: $color-primary;
+            }
+        }
+    }
+    .footer__form{
+        input{
+            padding: 14px 40px;
+            color: $color-white;
+            background: $color-violet;
+            border-radius: 30px;
+            font-size: $fs-1;
+            border: 1px solid rgba(255,255,255,.1);
+            outline: none;
+            &::placeholder{
+            color: $color-white;
+            text-align: center;
+            }
+            &:focus{
+                border: 1px solid rgba(255,255,255,1);
+                
+            }
+        }
+        button{
+            @include styleText($color-primary,$fs-1 - 1, $fw-6);
+            @include styleButton(14px,90px,2px solid $color-white,0 0 0 3em $color-white inset,30px);
+            transition: $ts;
+            margin: 0;
+            &:hover, &:focus{
+                box-shadow: 0 0 0 1px $color-violet inset;
+                color: $color-white;
+                text-decoration: none;
+                background: $color-violet;
+                border-color:  $color-white;
+            }
+        }
+
+    }
+}
