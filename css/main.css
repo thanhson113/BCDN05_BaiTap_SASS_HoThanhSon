@@ -17,6 +17,10 @@ li {
   list-style: none;
 }
 
+.header .show {
+  background: #fff;
+}
+
 .header .navbar {
   padding: 0.5rem 0;
 }
@@ -149,8 +153,27 @@ li {
   color: #b61984;
 }
 
+@media screen and (max-width: 1200px) {
+  .header .header__main {
+    background-color: #fff;
+  }
+  .header .header__img-logo {
+    width: 50%;
+  }
+  .header #headerOur {
+    text-align: center;
+  }
+  .header .navbar-nav {
+    margin: 0 0 30px;
+  }
+  .header .header__icon {
+    margin: 20px 0;
+  }
+}
+
 .carousel {
   padding-top: 100px;
+  position: relative;
 }
 
 .carousel .carousel__left h3 {
@@ -165,6 +188,20 @@ li {
   font-weight: 600;
 }
 
+.carousel .carousel__img-bottom {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+}
+
+@media screen and (max-width: 1200px) {
+  .carousel .carousel__left h1 {
+    font-size: 47px;
+  }
+}
+
 .about {
   background: #dcd1f3;
   position: relative;
@@ -174,13 +211,6 @@ li {
 .about .about__main {
   position: relative;
   z-index: 2;
-}
-
-.about .about__img-top {
-  width: 100%;
-  position: absolute;
-  top: -30%;
-  left: 0;
 }
 
 .about .about__img-bottom {
@@ -261,9 +291,9 @@ li {
 }
 
 .contact form .form-control:focus {
-  -webkit-box-shadow: 0 0 4px 0 black;
-          box-shadow: 0 0 4px 0 black;
-  border: none;
+  -webkit-box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.1);
+          box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.1);
+  border-color: rgba(0, 0, 0, 0.1);
 }
 
 .contact form h2 {
@@ -283,9 +313,10 @@ li {
 
 .contact form input,
 .contact form #inputState {
-  padding: 0 40px;
+  padding: 5px 40px;
   border-radius: 20px;
   font-size: 13px;
+  height: 45px;
 }
 
 .contact form textarea {
@@ -311,7 +342,7 @@ li {
 
 .contact form .form-area .contact__icon-sms {
   position: absolute;
-  top: 13%;
+  top: 13px;
   left: 14px;
   color: #b61984;
 }
@@ -320,14 +351,15 @@ li {
   color: #fff;
   font-size: 12px;
   font-weight: 600;
-  padding: 10px 40px;
+  padding: 13px 50px;
   border: 2px solid #b61984;
   -webkit-box-shadow: 0 0 0 3em #b61984 inset;
           box-shadow: 0 0 0 3em #b61984 inset;
-  border-radius: 20px;
+  border-radius: 30px;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
   margin: 20px 0 50px;
+  background: transparent;
 }
 
 .contact form button:hover, .contact form button:focus {
@@ -347,21 +379,22 @@ li {
   width: 100%;
 }
 
-footer {
-  position: relative;
+@media screen and (max-width: 992px) {
+  .contact form h2 {
+    text-align: left;
+  }
 }
 
-footer .footer__img-bottom {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: -1;
+footer {
+  padding: 50px 0 200px;
+  background: url("../img/footer_background.jpg") no-repeat center;
+  background-size: cover;
 }
 
 footer h4 {
   padding: 10px 0;
   color: #fff;
+  font-weight: 600;
 }
 
 footer li, footer a {
@@ -370,7 +403,7 @@ footer li, footer a {
   line-height: 2.5;
 }
 
-footer li:hover a {
+footer a:hover {
   color: #fff;
   opacity: .8;
 }
@@ -379,6 +412,7 @@ footer .footer__list li {
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 5px 0;
 }
 
 footer .footer__icon a {
@@ -389,8 +423,13 @@ footer .footer__icon a:hover {
   color: #191919;
 }
 
+footer .footer__form {
+  padding: 20px 0;
+}
+
 footer .footer__form input {
-  padding: 14px 40px;
+  padding: 14px 0;
+  width: 100%;
   color: #fff;
   background: #b61984;
   border-radius: 30px;
@@ -435,6 +474,8 @@ footer .footer__form button {
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
   margin: 0;
+  background: transparent;
+  width: 100%;
 }
 
 footer .footer__form button:hover, footer .footer__form button:focus {
@@ -444,5 +485,20 @@ footer .footer__form button:hover, footer .footer__form button:focus {
   text-decoration: none;
   background: #b61984;
   border-color: #fff;
+}
+
+@media screen and (max-width: 992px) {
+  footer {
+    padding: 0 0 100px;
+  }
+  footer h4 {
+    padding: 0 0 10px;
+  }
+  footer .footer__form input, footer .footer__form button {
+    width: 100%;
+  }
+  footer .footer__col {
+    margin: 0 0 50px;
+  }
 }
 /*# sourceMappingURL=main.css.map */

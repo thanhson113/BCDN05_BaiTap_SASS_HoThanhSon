@@ -1,4 +1,7 @@
 .header{
+    .show{
+        background: $color-white;
+    }
     .navbar {
         padding: 0.5rem 0;
     }
@@ -99,6 +102,25 @@
                 color: $color-violet;
             }
         }
+    } 
+}
+// Responsive
+@include responsive("xl"){
+    .header{
+        .header__main{
+            background-color: $color-white;
+        }
+        .header__img-logo{
+            width: 50%;
+        }
+        #headerOur{
+            text-align: center;
+        }
+        .navbar-nav{
+            margin: 0 0 30px ;
+        }
+        .header__icon{
+            margin: 20px 0
+        }
     }
-    
 }

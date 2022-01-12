@@ -16,7 +16,18 @@ $fw-4: 400;
 $fw-6: 600;
 $fw-7: 700;
 
+// Border
+$boder-1: 0 0 4px 0 rgba(0,0,0,0.1);
 // box-shadow
 $box-sd-1: 0 30px 30px -10px rgba(0,0,0,0.2);
+$box-sd-2: 0 0 4px 0 rgba(0,0,0,0.1);
 // transition 
 $ts: all .5s;
+
+//breakpoints
+$breakpoints : (
+    "xs": 576px,
+    "md": 768px,
+    "lg": 992px,
+    "xl": 1200px,
+)
