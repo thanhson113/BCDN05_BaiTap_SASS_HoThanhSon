@@ -373,7 +373,7 @@ li {
 
 .contact .contact__img-bottom {
   position: absolute;
-  bottom: 0;
+  bottom: -1px;
   left: 0;
   z-index: -1;
   width: 100%;
